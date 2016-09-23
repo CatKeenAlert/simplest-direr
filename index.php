@@ -1,1 +1,0 @@
-/var/www/share.com/download.share.com/index.php
