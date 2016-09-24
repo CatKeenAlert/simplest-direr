@@ -6,8 +6,8 @@ $files_names = scandir($abs_current_dir);
 //获取也就是扫描文件夹内的文件及文件夹名存入数组 $files_names
 foreach ($files_names as $name) {
 //echo $name;
-//echo $url_current_dir;
-$current_dir_file_url= $url_current_dir .'/'.$name;
+//echo $current_dir_mid;
+$current_dir_file_url= $current_dir_mid .'/'.$name;
 //echo $current_dir_file_url.'<br>';
 $file_a_element = "<a style='text-decoration:none;' href=$current_dir_file_url>".$name."</a>";
 echo $file_a_element."<br/>";

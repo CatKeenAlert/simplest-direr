@@ -25,10 +25,10 @@ eg：
 
 ####IndexController.class.php
 ####IndexController.class.php是模仿Thinkphp名的名，但是目前没有按照thinkphp的控制器内容来写，还有待后续摸索。
-####IndexController.class.php的主要作用是生成$url_current_dir(供用户点击跳转的地址),经测试可知（无意中发现）这个的变量可以不是RUL，只需要是网站更目录下的相对目录(当前目录是更目录或者外部符号连接就不输出字符串)就行了，换句话说，如果不作其他输出的话，这个文件只有一句话就就能完成任务了：
+####IndexController.class.php的主要作用是生成$current_dir_mid(供用户点击跳转的地址),经测试可知（无意中发现）这个的变量可以不是RUL，只需要是网站更目录下的相对目录(当前目录是更目录或者外部符号连接就不输出字符串)就行了，换句话说，如果不作其他输出的话，这个文件只有一句话就就能完成任务了：
 
 <pre><code>//当前目录是更目录或者外部符号连接就不输出字符串
-$url_current_dir = substr($abs_current_dir, length($_SERVER['SERVER_NAME']));</code></pre>
+$current_dir_mid = substr($abs_current_dir, length($_SERVER['SERVER_NAME']));</code></pre>
 
 ######在后面的版本中可能会简化这个文件，并且对'当前目录是更目录或者外部符号连接就不输出字符串'的情况做分别输出处理。
 
@@ -36,7 +36,7 @@ $url_current_dir = substr($abs_current_dir, length($_SERVER['SERVER_NAME']));</c
 
 ####ListModle.class.php
 ####ListModel.class.php是模仿Thinkphp名的名，但是目前没有按照thinkphp的控制器内容来写，还有待后续摸索。
-####ListModle.class.php目前主要是动态输出了$abs_current_dir的所有目录名，并将其嵌入<a>标签对中，将<a>标签的href属性定义为$url_current_dir。
+####ListModle.class.php目前主要是动态输出了$abs_current_dir的所有目录名，并将其嵌入<a>标签对中，将<a>标签的href属性定义为$current_dir_mid。
 
 ##非源码(测试)文件。
 ####file是个测试文件，普通文本，内容是'hello',点击file文件就会到显示hello的页面。
