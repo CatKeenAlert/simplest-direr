@@ -11,4 +11,5 @@ $current_dir_file_url= $url_current_dir .'/'.$name;
 $file_a_element = "<a style='text-decoration:none;' href=$current_dir_file_url>".$name."</a>";
 echo $file_a_element."<br/>";
 }
+echo "<br>------------以上是的php文件的输出--------------<br>";
 ?>

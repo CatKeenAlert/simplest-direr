@@ -19,6 +19,6 @@ echo '当前目录对应的URL是： '.$url_current_dir;
 echo '当前项目目录是： '.$APP_PATH;
 //echo '$APP_PATH';
 echo '以下是目录下的内容列表： <br>';
-echo "<br>--------------------------<br>";
+echo "<br>------------以上是中间的php文件的输出--------------<br>";
 include $APP_PATH."/ListModel.class.php";
 ?>
