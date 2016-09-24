@@ -16,8 +16,8 @@ $APP_PATH = $root.'/direr';
 //echo '这是项目目录： '.$APP_PATH;
 $abs_current_dir = __DIR__;
 echo '当前目录的绝对路径是：'.$abs_current_dir;
-echo '<br>-------------这是被请求的html文件的输出-------------<br>';
-include $APP_PATH.'/'.'IndexController.class.php';
+echo '<br>-------------以上是被请求的html文件的输出-------------<br><br>';
+require $APP_PATH.'/'.'IndexController.class.php';
 ?>
 </body>
 </html>

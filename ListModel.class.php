@@ -1,4 +1,5 @@
 <?php
+echo '<br>以下是目录下的内容列表： <br>';
 //这是列出当前目录简单情况的php文件,后续可把TA做成类，如同其文件名一样。
 $files_names = scandir($abs_current_dir);
 //var_dump($files_names);
@@ -11,5 +12,5 @@ $current_dir_file_url= $url_current_dir .'/'.$name;
 $file_a_element = "<a style='text-decoration:none;' href=$current_dir_file_url>".$name."</a>";
 echo $file_a_element."<br/>";
 }
-echo "<br>------------以上是的php文件的输出--------------<br>";
+echo "------------以上是的php文件的输出--------------<br>";
 ?>
