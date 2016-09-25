@@ -41,3 +41,4 @@ $current_dir_mid = substr($abs_current_dir, length($_SERVER['SERVER_NAME']));</c
 ##非源码(测试)文件。
 ####file是个测试文件，普通文本，内容是'hello',点击file文件就会到显示hello的页面。
 ####file.7z是个测试文件，把file压缩生成的.7z文件，点击file.7z浏览器就会下载该文件。
+####test.png是个测试文件，.png格式的图片目前发现的除了test.png之外，啥名字都不能显示，应该是apache的配置上的问题。后续会解决。
