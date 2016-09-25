@@ -2,7 +2,7 @@
 ##主机（物理\虚拟）环境配置
 ####该项目一直在Apache5.4环境下测试，其他环境暂且未知妥否。
 ####该项目暂时不需要数据库。
-####为了让ListModel.class.php中的scandir()函数成功获取当前目录下的所有目录名而动态生成数组，务必确保在主机（物理\虚拟）的apache配置中Index开启（+Index）。
+####为了让FilestableModel.class.php中的scandir()函数成功获取当前目录下的所有目录名而动态生成数组，务必确保在主机（物理\虚拟）的apache配置中Index开启（+Index）。
 ####如果需要用当前主机域名显示更目录以外目录，请确保主机（物理\虚拟）的apache配置中FollowSymLinks开启（+FollowSymLinks）。
 eg：
 <pre><code><Directory /your/root/path/>
@@ -32,10 +32,10 @@ $current_dir_mid = substr($abs_current_dir, length($_SERVER['SERVER_NAME']));</c
 
 ######在后面的版本中可能会简化这个文件，并且对'当前目录是更目录或者外部符号连接就不输出字符串'的情况做分别输出处理。
 
-####IndexController.class.php中require了ListModel.class.php。
+####IndexController.class.php中require了FilestableModel.class.php。
 
 ####ListModle.class.php
-####ListModel.class.php是模仿Thinkphp名的名，但是目前没有按照thinkphp的控制器内容来写，还有待后续摸索。
+####FilestableModel.class.php是模仿Thinkphp名的名，但是目前没有按照thinkphp的控制器内容来写，还有待后续摸索。
 ####ListModle.class.php目前主要是动态输出了$abs_current_dir的所有目录名，并将其嵌入<a>标签对中，将<a>标签的href属性定义为$current_dir_mid。
 
 ##非源码(测试)文件。
