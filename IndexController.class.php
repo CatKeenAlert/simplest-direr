@@ -10,8 +10,6 @@ if(!($root == $abs_current_dir))
     //echo '当前目录就是网站根目录或是符号连接。';
     $current_dir_in_root = '';
 }
-//echo '<br>';
-//echo $APP_PATH."/FilestableModel.class.php";
 echo '当前项目绝对路径是： '.$APP_PATH;
 $url_root = $_SERVER['SERVER_NAME'];
 $current_dir_mid = 'http://'.$url_root.$current_dir_in_root;

@@ -30,7 +30,8 @@ eg：
 <pre><code>//当前目录是更目录或者外部符号连接就不输出字符串
 $current_dir_mid = substr($abs_current_dir, length($_SERVER['SERVER_NAME']));</code></pre>
 
-######在后面的版本中可能会简化这个文件，并且对'当前目录是更目录或者外部符号连接就不输出字符串'的情况做分别输出处理。
+######考虑到兼容性方面的可能情况，放弃对IndexController.class.php作这样的简化。
+######并且对'当前目录是更目录或者外部符号连接就不输出字符串'的情况做分别输出处理。
 
 ####IndexController.class.php中require了FilestableModel.class.php。
 
