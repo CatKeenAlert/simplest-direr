@@ -21,12 +21,23 @@ echo "------------以上是最后的php文件的输出--------------<br>";
 
 function table_print($filename)
 {
-    $arr_stat = stat($filename);
+    if(is_link($filename)){
+        $link_yes_string = '是';
+        $arr_stat = lstat($filename);
+    }else {
+        $link_yes_string = '否';
+        $arr_stat = stat($filename);
+    }
     //var_dump($arr_stat);
+    //if(!$arr_stat)
+//    {
+//        echo '当前目录是个符号连接。';
+//    }
     $current_dir_file_url= $current_dir_mid.'/'.$filename;
     $a_element_string = "<a style='text-decoration:none;' href=$current_dir_file_url>".$filename."</a>";
     echo   '<td>'.$a_element_string.'</td>';
     echo   '<td>'.$arr_stat['size'].'</td>';
+    echo   '<td>'.$link_yes_string.'</td>';
     echo   '<td>'.$arr_stat['ctime'].'</td>';
     echo   '<td>'.$arr_stat['mtime'].'</td>';
     echo   '<td>'.$arr_stat['atime'].'</td>';
